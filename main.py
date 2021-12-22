@@ -7,11 +7,12 @@ import logging
 logging.basicConfig(format='[%(levelname)s]: %(message)s', level=logging.DEBUG)
 
 if __name__ == '__main__':
-
     # The extract process
     logging.info('Starting extract data...')
     items_data = request_data()
 
+    # A validation process could be added here 
+    
     # Downloading information into csv
     logging.info('Starting download process...')
     load_data(items_data)
